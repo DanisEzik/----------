@@ -5,7 +5,7 @@ let good = "Поздравляем, ваш пароль успешно сохр�
 
 
 if(password.length < 8){
-   setTimeout(10).alert(error);
+   alert(error);
 } else alert(good);
 
 if(password.length > 20){

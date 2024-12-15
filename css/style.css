@@ -4,10 +4,11 @@
 } */
 
 .nadpi {
-    size: 500px;
+    font-size: 500px;
 }
 
 .al {
+    display: flex;
     align-items: center;
 }
 
