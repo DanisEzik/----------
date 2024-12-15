@@ -1,16 +1,47 @@
-let pass = document.getElementById("vvod");
-let password = pass.value.split("");
-let error = "Ошибка, ваш пароль подходит не по всем параметрам!";
-let good = "Поздравляем, ваш пароль успешно сохранен!";
+
+function check_password() {
+
+   const upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // Заглавные буквы
+   const lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz"; // Строчные буквы
+   const numbers = "0123456789"; // Цифры
+   const specialCharacters = "!@#$%^&*()_+-=[]{}|;:'\",.<>?/`~"; // Специальные символы
+
+   // Объединяем все символы в один список
+   const allCharacters = upperCaseLetters + lowerCaseLetters + numbers + specialCharacters;
+      
+   let pass = document.getElementById("vvod");
+   let password = pass.value;
+   let error = "Ошибка, ваш пароль подходит не по всем параметрам!";
+   let good = "Поздравляем, ваш пароль успешно сохранен!";
 
 
-if(password.length < 8){
-   alert(error);
-} else alert(good);
+      if(password.length < 8 || password.length > 20){
+         alert(error);
+      }else alert(good);
 
-if(password.length > 20){
-   alert(error);
-} else alert(good);
+      for (let i in password) {
+         if (upperCaseLetters.includes(i) || ) {
+            
+         } else {
+            
+         }
+      }
+
+
+   }
+
+   let access_btn = document.getElementById("access_btn")
+
+
+   access_btn.onclick = check_password;
+
+
+
+
+
+
+
+
 
 for(let i = 0; i < password.length; i++){
    if(password[i] != 0){
@@ -37,187 +68,187 @@ for(let i = 0; i < password.length; i++){
      
 }
 
-for(let i = 0; i < password.length; i++){
-   if(password[i] != "!");{
-      alert(error);
-   } elif(password[i] != "@");{
-      alert(error);
-   } elif(password[i] != "#");{
-      alert(error);
-   } elif(password[i] != "$");{
-      alert(error);
-   } elif(password[i] != "%");{
-      alert(error);
-   } elif(password[i] != "^");{
-      alert(error);
-   }  elif(password[i] != "&");{
-      alert(error);
-   } elif(password[i] != "*");{
-      alert(error);
-   } elif(password[i] != "(");{
-      alert(error);
-   } elif(password[i] != ")");{
-      alert(error);
-   } elif(password[i] != "-");{
-      alert(error);
-   } elif(password[i] != "=");{
-      alert(error);
-   } elif(password[i] != "_");{
-      alert(error);
-   } elif(password[i] != "=");{
-      alert(error);
-   } elif(password[i] != "/");{
-      alert(error);
-   } elif(password[i] != "|");{
-      alert(error);
-   } elif(password[i] != ">");{
-      alert(error);
-   } elif(password[i] != "<");{
-      alert(error);
-   } elif(password[i] != "[");{
-      alert(error);
-   } elif(password[i] != "]");{
-      alert(error);
-   } elif(password[i] != "{");{
-      alert(error);
-   } elif(password[i] != "}");{
-      alert(error);
-   } elif(password[i] != ";");{
-      alert(error);
-   } elif(password[i] != ":");{
-      alert(error);
-   } elif(password[i] != "`");{
-      alert(error);
-   } elif(password[i] != "~");{
-      alert(error);
-   } elif(password[i] != "№");{
-      alert(error);
-   } elif(password[i] != ".");{
-      alert(error);
-   } elif(password[i] != ",");{
-      alert(error);
-   } elif(password[i] != "?");{
-      alert(error);
-   }  
-}
+// for(let i = 0; i < password.length; i++){
+//    if(password[i] != "!");{
+//       alert(error);
+//    } elif(password[i] != "@");{
+//       alert(error);
+//    } elif(password[i] != "#");{
+//       alert(error);
+//    } elif(password[i] != "$");{
+//       alert(error);
+//    } elif(password[i] != "%");{
+//       alert(error);
+//    } elif(password[i] != "^");{
+//       alert(error);
+//    }  elif(password[i] != "&");{
+//       alert(error);
+//    } elif(password[i] != "*");{
+//       alert(error);
+//    } elif(password[i] != "(");{
+//       alert(error);
+//    } elif(password[i] != ")");{
+//       alert(error);
+//    } elif(password[i] != "-");{
+//       alert(error);
+//    } elif(password[i] != "=");{
+//       alert(error);
+//    } elif(password[i] != "_");{
+//       alert(error);
+//    } elif(password[i] != "=");{
+//       alert(error);
+//    } elif(password[i] != "/");{
+//       alert(error);
+//    } elif(password[i] != "|");{
+//       alert(error);
+//    } elif(password[i] != ">");{
+//       alert(error);
+//    } elif(password[i] != "<");{
+//       alert(error);
+//    } elif(password[i] != "[");{
+//       alert(error);
+//    } elif(password[i] != "]");{
+//       alert(error);
+//    } elif(password[i] != "{");{
+//       alert(error);
+//    } elif(password[i] != "}");{
+//       alert(error);
+//    } elif(password[i] != ";");{
+//       alert(error);
+//    } elif(password[i] != ":");{
+//       alert(error);
+//    } elif(password[i] != "`");{
+//       alert(error);
+//    } elif(password[i] != "~");{
+//       alert(error);
+//    } elif(password[i] != "№");{
+//       alert(error);
+//    } elif(password[i] != ".");{
+//       alert(error);
+//    } elif(password[i] != ",");{
+//       alert(error);
+//    } elif(password[i] != "?");{
+//       alert(error);
+//    }  
+// }
 
-for(let i = 0; i < password.length; i++){
-   if(password[i] != "q");{
-      alert(error);
-   } elif(password[i] != "w");{
-      alert(error);
-   } elif(password[i] != "e");{
-      alert(error);
-   } elif(password[i] != "r");{
-      alert(error);
-   } elif(password[i] != "t");{
-      alert(error);
-   } elif(password[i] != "y");{
-      alert(error);
-   } elif(password[i] != "u");{
-      alert(error);
-   } elif(password[i] != "i");{
-      alert(error);
-   } elif(password[i] != "o");{
-      alert(error);
-   } elif(password[i] != "p");{
-      alert(error);
-   }  elif(password[i] != "a");{
-      alert(error);
-   } elif(password[i] != "s");{
-      alert(error);
-   } elif(password[i] != "d");{
-      alert(error);
-   } elif(password[i] != "f");{
-      alert(error);
-   } elif(password[i] != "g");{
-      alert(error);
-   } elif(password[i] != "h");{
-      alert(error);
-   } elif(password[i] != "j");{
-      alert(error);
-   } elif(password[i] != "k");{
-      alert(error);
-   } elif(password[i] != "l");{
-      alert(error);
-   } elif(password[i] != "z");{
-      alert(error);
-   } elif(password[i] != "x");{
-      alert(error);
-   } elif(password[i] != "c");{
-      alert(error);
-   } elif(password[i] != "v");{
-      alert(error);
-   } elif(password[i] != "b");{
-      alert(error);
-   } elif(password[i] != "n");{
-      alert(error);
-   } elif(password[i] != "m");{
-      alert(error);
-   } 
-}
+// for(let i = 0; i < password.length; i++){
+//    if(password[i] != "q");{
+//       alert(error);
+//    } elif(password[i] != "w");{
+//       alert(error);
+//    } elif(password[i] != "e");{
+//       alert(error);
+//    } elif(password[i] != "r");{
+//       alert(error);
+//    } elif(password[i] != "t");{
+//       alert(error);
+//    } elif(password[i] != "y");{
+//       alert(error);
+//    } elif(password[i] != "u");{
+//       alert(error);
+//    } elif(password[i] != "i");{
+//       alert(error);
+//    } elif(password[i] != "o");{
+//       alert(error);
+//    } elif(password[i] != "p");{
+//       alert(error);
+//    }  elif(password[i] != "a");{
+//       alert(error);
+//    } elif(password[i] != "s");{
+//       alert(error);
+//    } elif(password[i] != "d");{
+//       alert(error);
+//    } elif(password[i] != "f");{
+//       alert(error);
+//    } elif(password[i] != "g");{
+//       alert(error);
+//    } elif(password[i] != "h");{
+//       alert(error);
+//    } elif(password[i] != "j");{
+//       alert(error);
+//    } elif(password[i] != "k");{
+//       alert(error);
+//    } elif(password[i] != "l");{
+//       alert(error);
+//    } elif(password[i] != "z");{
+//       alert(error);
+//    } elif(password[i] != "x");{
+//       alert(error);
+//    } elif(password[i] != "c");{
+//       alert(error);
+//    } elif(password[i] != "v");{
+//       alert(error);
+//    } elif(password[i] != "b");{
+//       alert(error);
+//    } elif(password[i] != "n");{
+//       alert(error);
+//    } elif(password[i] != "m");{
+//       alert(error);
+//    } 
+// }
 
-for(let i = 0; i < password.length; i++){
-   if(password[i] != "Q");{
-      alert(error);
-   } elif(password[i] != "W");{
-      alert(error);
-   } elif(password[i] != "E");{
-      alert(error);
-   } elif(password[i] != "R");{
-      alert(error);
-   } elif(password[i] != "T");{
-      alert(error);
-   } elif(password[i] != "Y");{
-      alert(error);
-   } elif(password[i] != "U");{
-      alert(error);
-   } elif(password[i] != "I");{
-      alert(error);
-   } elif(password[i] != "O");{
-      alert(error);
-   } elif(password[i] != "P");{
-      alert(error);
-   }  elif(password[i] != "A");{
-      alert(error);
-   } elif(password[i] != "S");{
-      alert(error);
-   } elif(password[i] != "D");{
-      alert(error);
-   } elif(password[i] != "F");{
-      alert(error);
-   } elif(password[i] != "G");{
-      alert(error);
-   } elif(password[i] != "H");{
-      alert(error);
-   } elif(password[i] != "J");{
-      alert(error);
-   } elif(password[i] != "K");{
-      alert(error);
-   } elif(password[i] != "L");{
-      alert(error);
-   } elif(password[i] != "Z");{
-      alert(error);
-   } elif(password[i] != "X");{
-      alert(error);
-   } elif(password[i] != "C");{
-      alert(error);
-   } elif(password[i] != "V");{
-      alert(error);
-   } elif(password[i] != "B");{
-      alert(error);
-   } elif(password[i] != "N");{
-      alert(error);
-   } elif(password[i] != "M");{
-      alert(error);
-   }    
-}
+// for(let i = 0; i < password.length; i++){
+//    if(password[i] != "Q");{
+//       alert(error);
+//    } elif(password[i] != "W");{
+//       alert(error);
+//    } elif(password[i] != "E");{
+//       alert(error);
+//    } elif(password[i] != "R");{
+//       alert(error);
+//    } elif(password[i] != "T");{
+//       alert(error);
+//    } elif(password[i] != "Y");{
+//       alert(error);
+//    } elif(password[i] != "U");{
+//       alert(error);
+//    } elif(password[i] != "I");{
+//       alert(error);
+//    } elif(password[i] != "O");{
+//       alert(error);
+//    } elif(password[i] != "P");{
+//       alert(error);
+//    }  elif(password[i] != "A");{
+//       alert(error);
+//    } elif(password[i] != "S");{
+//       alert(error);
+//    } elif(password[i] != "D");{
+//       alert(error);
+//    } elif(password[i] != "F");{
+//       alert(error);
+//    } elif(password[i] != "G");{
+//       alert(error);
+//    } elif(password[i] != "H");{
+//       alert(error);
+//    } elif(password[i] != "J");{
+//       alert(error);
+//    } elif(password[i] != "K");{
+//       alert(error);
+//    } elif(password[i] != "L");{
+//       alert(error);
+//    } elif(password[i] != "Z");{
+//       alert(error);
+//    } elif(password[i] != "X");{
+//       alert(error);
+//    } elif(password[i] != "C");{
+//       alert(error);
+//    } elif(password[i] != "V");{
+//       alert(error);
+//    } elif(password[i] != "B");{
+//       alert(error);
+//    } elif(password[i] != "N");{
+//       alert(error);
+//    } elif(password[i] != "M");{
+//       alert(error);
+//    }    
+// }
 
-for(let i = 0; i < password.length; i++){
-   if(password[i] != " ");{
-      alert(error);
-   }
-}
+// for(let i = 0; i < password.length; i++){
+//    if(password[i] != " ");{
+//       alert(error);
+//    }
+// }
 
 
 
